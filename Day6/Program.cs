@@ -55,14 +55,14 @@ namespace Day6
             }
             else
             {
-                tax = annualIncome - minimumIncome * taxRate + basePayableAmount;
+                tax = (annualIncome - minimumIncome) * taxRate + basePayableAmount;
             }
 
             return tax;
         }
         static void PrintResult(int annualIncome, double taxPayable)
         {
-            Console.WriteLine("For taxable annual income of $" + annualIncome  + ", the taxable amount is $" + taxPayable);
+            Console.WriteLine("For taxable annual income of $" + annualIncome + ", the taxable amount is $" + taxPayable);
             Console.ReadKey();
         }
     }
